@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('Install Maven') {
+          steps {
+            sh 'brew install maven'
+          }
+        }
 
         stage('Build') {
             steps {
