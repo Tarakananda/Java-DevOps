@@ -2,8 +2,7 @@ version: "3.9"
 
 services:
   app:
-    image: Java_image:1.0 
-    container_name: My_Application
+    image: java_image:1.0 
     ports:
       - "8081:8080"
     environment:
@@ -15,11 +14,10 @@ services:
       - mysql
   mysql:
     image: mysql:8.0
-    conainer_name: MySQLApplication
     environment:
       MYSQL_ROOT_PASSWORD: root 
       MYSQL_DATABASE: appdb
     volumes:
-      - mysql_data: var/lib/mysql
+      - mysql_data:/var/lib/mysql
 volumes:
   mysql_data:
