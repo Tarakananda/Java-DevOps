@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  app:
+    image: Java_image:1.0 
+    container_name: My_Application
+    ports:
+      - "8081:8080"
+    environment:
+      SPRING_PROFILES_ACIVE: dev
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASSWORD: root
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:8.0
+    conainer_name: MySQLApplication
+    environment:
+      MYSQL_ROOT_PASSWORD: root 
+      MYSQL_DATABASE: appdb
+    volumes:
+      - mysql_data: var/lib/mysql
+volumes:
+  mysql_data:
