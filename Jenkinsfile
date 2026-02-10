@@ -5,7 +5,7 @@ pipeline {
 
     stage('checkout') {
       steps {
-        git ''
+        git 'https://github.com/Tarakananda/Java-DevOps.git'
       }
     }
 
