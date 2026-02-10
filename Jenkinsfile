@@ -40,10 +40,10 @@ pipeline {
     }
   }
     post {
-      SUCCESS {
+      success {
         echo 'CICD pipeline SUCCESSFULL'
       }
-      FAILURE {
+      failure {
         echo 'CICD Pipeline failed'
       }
     }
