@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Install Maven') {
           steps {
-            sh 'brew install maven'
+            sh 'apt install maven'
           }
         }
 
