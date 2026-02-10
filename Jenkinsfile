@@ -41,7 +41,7 @@ pipeline {
 
     post {
       SUCCESS {
-        echo 'CICD pipeline SUCCESSFULL"
+        echo 'CICD pipeline SUCCESSFULL'
       }
       FAILURE {
         echo 'CICD Pipeline failed'
