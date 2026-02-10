@@ -3,12 +3,6 @@ pipeline {
 
   stages {
 
-    stage('checkout') {
-      steps {
-        git 'https://github.com/Tarakananda/Java-DevOps.git'
-      }
-    }
-
     stage('Build') {
       steps {
         sh 'mvn clean verify -DskipTests'
