@@ -1,6 +1,10 @@
 pipeline {
     agent any
-
+    
+    environment{
+       IMAGE_NAME = "java_image"
+       IMAGE_TAG = "1.0"
+     }
     stages {
 
         stage('Build') {
