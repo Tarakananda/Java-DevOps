@@ -6,7 +6,11 @@ pipeline {
        IMAGE_TAG = "1.0"
      }
     stages {
-
+      stage('Checkout Code') {
+        steps {
+          git branch: 'main', url: 'https://github.com/Tarakananda/Java-DevOps.git'
+        }
+      }
         stage('Build') {
             steps {
                 sh 'mvn clean verify -DskipTests'
