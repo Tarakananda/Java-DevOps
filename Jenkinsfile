@@ -17,7 +17,7 @@ pipeline {
 
     stage('Dockerfile') {
       steps {
-        sh 'docker build -t Java_image:1.0'
+        sh 'docker build -t Java_image:1.0 .'
       }
     }
 
@@ -25,7 +25,7 @@ pipeline {
       steps {
         sh '''
         docker compose down || true
-        docker compose up
+        docker compose up -d
         '''
       }
     }
