@@ -1,49 +1,46 @@
 pipeline {
-  agent any
-  
-  tools {
-        maven 'Maven3'
-        jdk 'JDK17'
-    }
-  
-  stages {
+    agent any
 
-    stage('Build') {
-      steps {
-        sh 'mvn clean verify -DskipTests'
-      }
+    stages {
+
+        stage('Build') {
+            steps {
+                sh '''
+                docker run --rm \
+                  -v "$PWD":/app \
+                  -w /app \
+                  maven:3.9.6-eclipse-temurin-17 \
+                  mvn clean verify -DskipTests
+                '''
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t java-devops-demo:1.0 .'
+            }
+        }
+
+        stage('Docker Compose') {
+            steps {
+                sh 'docker-compose up -d --build'
+            }
+        }
+
+        stage('Health Check') {
+            steps {
+                sh 'curl -f http://localhost:8080'
+            }
+        }
     }
 
-    stage('Dockerfile') {
-      steps {
-        sh 'docker build -t Java_image:1.0 .'
-      }
-    }
-
-    stage('Docker-compose') {
-      steps {
-        sh '''
-        docker compose down || true
-        docker compose up -d
-        '''
-      }
-    }
-
-    stage('Health_check') {
-      steps {
-        sh '''
-        sleep 15
-        curl -f http://localhost:8081/actuator/health
-        '''
-      }
-    }
-  }
     post {
-      success {
-        echo 'CICD pipeline SUCCESSFULL'
-      }
-      failure {
-        echo 'CICD Pipeline failed'
-      }
+        success {
+            echo '✅ CICD Pipeline successful'
+        }
+        failure {
+            echo '❌ CICD Pipeline failed'
+        }
     }
-  }
+}
+
