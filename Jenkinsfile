@@ -38,7 +38,7 @@ pipeline {
         '''
       }
     }
-
+  }
     post {
       SUCCESS {
         echo 'CICD pipeline SUCCESSFULL'
@@ -48,4 +48,3 @@ pipeline {
       }
     }
   }
-}
