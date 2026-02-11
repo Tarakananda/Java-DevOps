@@ -1,9 +1,6 @@
 pipeline {
-    agent {
-      docker {
-        image 'maven:3.9.6-eclipse-temurin-17'
-      }
-    }
+    agent any
+    
     environment{
        IMAGE_NAME = "java_image"
        IMAGE_TAG = "1.0"
