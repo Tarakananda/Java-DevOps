@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-    
+    agent {
+      docker {
+        image 'maven:3.9.6-eclipse-temurin-17'
+      }
+    }
     environment{
        IMAGE_NAME = "java_image"
        IMAGE_TAG = "1.0"
@@ -19,7 +22,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t java-devops-demo:1.0 .'
+                sh 'docker build -t java_image:1.0 .'
             }
         }
 
@@ -31,7 +34,7 @@ pipeline {
 
         stage('Health Check') {
             steps {
-                sh 'curl -f http://localhost:8080'
+                sh 'curl -f http://localhost:8081'
             }
         }
     }
