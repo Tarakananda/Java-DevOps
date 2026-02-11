@@ -1,0 +1,17 @@
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/MysqlTestApplication.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/model/ValidatorTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/owner/PetTypeFormatterTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java
+/Users/bharathkumarreddy/Desktop/Tarakananda/DockerJenkinsProject/src/test/java/org/springframework/samples/petclinic/vet/VetTests.java

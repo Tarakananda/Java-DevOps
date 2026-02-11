@@ -13,7 +13,7 @@ pipeline {
       }
         stage('Build') {
             steps {
-                sh 'mvn clean verify -DskipTests'
+                sh './mvnw clean package -Pci'
             }
         }
 
